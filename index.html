@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript</title>
+
+	
+	
+	<style>
+		img { position: absolute; transition: width 2s; transition: opacity 2s; };
+		#picA { width: 0px; opacity: 0;  }
+		#picB { width: 300px; opacity: 1;  }
+		#picC {  width: 0px; opacity: 0;  }
+	</style>
+</head>
+<body>
+	<div>
+		<div> 
+			<button onclick="Change('A')">A</button>
+			<button onclick="Change('B')">B</button>
+			<button onclick="Change('C')">C</button>
+		</div>
+		<img id="picA" src="a.jpg">
+		<img id="picB" src="b.jpg">
+		<img id="picC" src="c.jpg">
+		
+	</div>
+	
+		<script>
+
+			var from = 'B';
+			function Change(key){
+
+
+				var a = document.getElementById('picA');
+				var b = document.getElementById('picB');
+				var c = document.getElementById('picC');
+				if(key == 'A')
+				{
+					a.style.width = '300px';
+					b.style.width = '0px';
+					c.style.width = '0px';
+					a.style.opacity = '1';
+					b.style.opacity = '0';
+					c.style.opacity = '0';
+
+
+				}
+				else if (key == 'B')
+				{
+					a.style.width = '000px';
+					b.style.width = '300px';
+					c.style.width = '0px';
+					a.style.opacity = '0';
+					b.style.opacity = '1';
+					c.style.opacity = '0';
+				}
+				else if (key == 'C')
+				{
+
+				a.style.width = '000px';
+					b.style.width = '0px';
+					c.style.width = '300px';
+					a.style.opacity = '0';
+					b.style.opacity = '0';
+					c.style.opacity = '1';
+				}
+			}
+	</script>
+	
+</body>
+</html>
